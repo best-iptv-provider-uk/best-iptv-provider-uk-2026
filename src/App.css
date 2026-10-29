@@ -2,11 +2,11 @@
 
 /* Theme: IPTVGREAT123-inspired clean professional design */
 :root {
-  --ink: #0b1b33;
-  --ink-2: #33415c;
-  --muted: #5b6b85;
+  --ink: #14213d;
+  --ink-2: #334155;
+  --muted: #475569;
   --line: #e6edf6;
-  --blue: #0a5cff;
+  --blue: #2563eb;
   --blue-dark: #0847c6;
   --teal: #00c9a7;
   --amber: #ffb020;
@@ -29,7 +29,7 @@ body {
   color: var(--ink);
   background: #fff;
   line-height: 1.6;
-  font-size: 17px;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -43,8 +43,8 @@ ul { list-style: none; }
 
 h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.02em; }
 
-h1 { font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.05; font-weight: 700; }
-h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.12; font-weight: 700; }
+h1 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.08; font-weight: 700; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; font-weight: 700; }
 h3 { font-size: 1.25rem; font-weight: 600; }
 
 .kicker {
@@ -71,7 +71,7 @@ h3 { font-size: 1.25rem; font-weight: 600; }
   background: var(--teal);
 }
 
-.section { padding: 96px 0; }
+.section { padding: 72px 0; }
 .section.soft { background: var(--bg-soft); border-block: 1px solid var(--line); }
 
 .section-head { max-width: 680px; margin: 0 auto 56px; text-align: center; }
@@ -139,7 +139,7 @@ h3 { font-size: 1.25rem; font-weight: 600; }
   border-bottom: 1px solid var(--line);
 }
 
-.header .container { display: flex; align-items: center; justify-content: space-between; height: 74px; gap: 24px; }
+.header .container { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
 
 .logo { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 700; color: var(--ink); }
 
@@ -185,7 +185,7 @@ h3 { font-size: 1.25rem; font-weight: 600; }
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 90px 0 100px;
+  padding: 72px 0 80px;
   background:
     radial-gradient(52rem 30rem at 85% -12%, rgba(10, 92, 255, 0.09), transparent 60%),
     radial-gradient(40rem 26rem at -10% 30%, rgba(0, 201, 167, 0.08), transparent 60%),
@@ -787,3 +787,80 @@ h3 { font-size: 1.25rem; font-weight: 600; }
   .float-card { animation: none; }
   .tv-live i { animation: none; }
 }
+/* Table styles */
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+th, td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  text-align: left;
+  font-size: 0.92rem;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+thead th {
+  background: var(--bg-soft);
+  position: sticky;
+  top: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+th[scope="row"] {
+  background: #fbfcfe;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+tbody tr {
+  transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+  background: #f5f8fe;
+}
+
+td a {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  color: var(--blue);
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Anchor offset for sticky header */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Responsive typography helpers */
+@media (max-width: 640px) {
+  .table-wrap::after {
+    content: "Swipe to scroll →";
+    display: block;
+    text-align: right;
+    font-size: 0.75rem;
+    color: var(--muted);
+    padding: 0.5rem 1rem;
+  }
+}
+
