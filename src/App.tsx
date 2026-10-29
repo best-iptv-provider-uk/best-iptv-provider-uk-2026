@@ -166,7 +166,10 @@ export default function App() {
           <div className="hero-bg" aria-hidden="true" />
           <div className="container hero-inner">
             <p className="eyebrow">Independent UK comparison publication</p>
-            <h1>{FOCUS_KEYWORD}</h1>
+            <h1>
+              {FOCUS_KEYWORD.split(" ").slice(0, 3).join(" ")}{" "}
+              <span className="accent">{FOCUS_KEYWORD.split(" ").slice(3).join(" ")}</span>
+            </h1>
             <p className="hero-lead">
               A calm, evidence-led comparison of three IPTV services that UK viewers
               frequently research in 2026. We separate provider-advertised claims from
