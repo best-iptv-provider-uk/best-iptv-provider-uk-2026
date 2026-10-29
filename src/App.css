@@ -864,3 +864,78 @@ html {
   }
 }
 
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--blue);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  z-index: 1000;
+  border-radius: 8px;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  clip: auto;
+  clip-path: none;
+  overflow: visible;
+  white-space: normal;
+}
+
+/* Hero heading */
+.hero h1 {
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.hero h1 .accent {
+  background: linear-gradient(100deg, var(--blue), var(--teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Header no-wrap fixes */
+.logo, .logo span, .brand-mark {
+  white-space: nowrap;
+}
+
+.nav a {
+  white-space: nowrap;
+}
+
+.header-cta .btn {
+  white-space: nowrap;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+}
+
+/* Hero spacing */
+.hero .container {
+  gap: 40px;
+}
+
+.hero h1 {
+  margin-top: 0;
+}
+
+.hero-sub {
+  max-width: 560px;
+}
+
+/* Hero visual alignment */
+.hero-visual {
+  align-self: center;
+}
+
+.float-card {
+  max-width: 220px;
+}
+

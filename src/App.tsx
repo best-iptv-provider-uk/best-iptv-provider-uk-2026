@@ -151,7 +151,6 @@ export default function App() {
           <div className="container">
             <div>
               <div className="hero-badge">
-                <span className="stars">★★★★★</span>
                 <span>Independent UK comparison publication</span>
               </div>
               <h1>
@@ -204,7 +203,7 @@ export default function App() {
                 <div className="tv-screen">
                   <span className="tv-live">
                     <i />
-                    LIVE
+                    PREVIEW
                   </span>
                   <span className="tv-4k">4K</span>
                   <div className="tv-title">Provider comparison dashboard</div>
