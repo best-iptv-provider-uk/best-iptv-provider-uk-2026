@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://best-iptv-provider-uk.github.io/best-iptv-provider-uk-2026/sitemap.xml
